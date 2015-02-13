@@ -13,5 +13,15 @@ namespace WebFormsApplication
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            this.Title = DateTime.Now.ToString();
+        }
+
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+        }
     }
 }

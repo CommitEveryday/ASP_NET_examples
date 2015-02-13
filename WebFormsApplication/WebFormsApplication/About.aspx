@@ -28,7 +28,8 @@
         <ul>
             <li><a runat="server" href="~/">Home</a></li>
             <li><a runat="server" href="~/About">About</a></li>
-            <li><a runat="server" href="~/Contact">Contact</a></li>
+            <li><a runat="server" href="~/Contact">Contact</a><asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            </li>
         </ul>
     </aside>
 </asp:Content>

@@ -4,3 +4,25 @@
 2015-02-15 12:18:26,151 INFO  WebApp.Default [(null)] - Button1_Init
 2015-02-15 12:18:26,153 INFO  WebApp.Default [(null)] - Page_Init
 2015-02-15 12:18:26,179 INFO  WebApp.Default [(null)] - Page_Load
+2015-02-16 17:14:38,792 [6] INFO WebApp.Default - Button1_Init
+-------------------------------------
+2015-02-16 17:14:38,828 [6] INFO WebApp.Default - Page_Init
+-------------------------------------
+2015-02-16 17:14:39,130 [6] ERROR WebApp.Default - Exception on Page_Init
+System.NullReferenceException: null ref exception ---> System.ArgumentException: inner agrument exception
+   --- End of inner exception stack trace ---
+   at WebApp.Default.Page_Init(Object sender, EventArgs e) in c:\MyProject\ASP_examples\WebFormsApplication\WebApp\Default.aspx.cs:line 27
+-------------------------------------
+2015-02-16 17:14:39,167 [6] INFO WebApp.Default - Page_Load
+-------------------------------------
+2015-02-16 17:16:11,990 [8] INFO WebApp.Default - Button1_Init
+-------------------------------------
+2015-02-16 17:16:12,039 [8] INFO WebApp.Default - Page_Init
+-------------------------------------
+2015-02-16 17:16:12,170 [8] ERROR WebApp.Default - Exception on Page_Init
+System.NullReferenceException: null ref exception ---> System.ArgumentException: inner agrument exception
+   --- End of inner exception stack trace ---
+   at WebApp.Default.Page_Init(Object sender, EventArgs e) in c:\MyProject\ASP_examples\WebFormsApplication\WebApp\Default.aspx.cs:line 27
+-------------------------------------
+2015-02-16 17:16:12,171 [8] INFO WebApp.Default - Page_Load
+-------------------------------------

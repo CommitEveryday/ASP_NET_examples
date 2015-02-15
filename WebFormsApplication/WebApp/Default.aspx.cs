@@ -17,24 +17,16 @@ namespace WebApp
             log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
         }
 
-        private void Page_Init(object sender, EventArgs e)
+        protected void Button2_Click(object sender, EventArgs e)
         {
             log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
-            try
-            {
-                ArgumentException argEx = new ArgumentException("inner agrument exception");
-                NullReferenceException nullEx = new NullReferenceException("null ref exception", argEx);
-                throw nullEx;
-            }
-            catch (Exception ex)
-            {
-                log.Error("Exception on Page_Init", ex);
-            }
+            Div1.InnerText = Text1.Value;
         }
 
-        protected void Button1_Init(object sender, EventArgs e)
+        protected void Button3_Click(object sender, EventArgs e)
         {
             log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            Div1.InnerText = Text1.Value;
         }
     }
 }

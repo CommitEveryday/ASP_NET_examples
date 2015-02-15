@@ -10,9 +10,16 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:Button ID="Button1" runat="server" OnInit="Button1_Init" Text="Button" />
-    
+        <p><input runat="server"  id="Button2" type="button" value="Click Click" /></p>
+
     </div>
+        
+        <input runat="server" id="Text1" type="text" /><p>
+            <asp:Button ID="Button3" runat="server" Text="Button" OnClick="Button3_Click" />
+        </p>
+        
     </form>
+    <div runat="server" id="Div1">
+        </div>
 </body>
 </html>

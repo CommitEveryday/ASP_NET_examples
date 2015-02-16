@@ -18,8 +18,11 @@
             <asp:Button ID="Button3" runat="server" Text="Button" OnClick="Button3_Click" />
         </p>
         
-    </form>
     <div runat="server" id="Div1">
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
         </div>
-</body>
+        
+    </form>
+    </body>
 </html>

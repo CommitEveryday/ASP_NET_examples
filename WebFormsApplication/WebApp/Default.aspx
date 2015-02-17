@@ -31,6 +31,9 @@
         </div>
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:ListBox ID="ListBox1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged" Height="93px" Width="262px"></asp:ListBox>
+        <div runat="server" id="DivLiteral">
+            <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+        </div>
     </form>
 </body>
 </html>

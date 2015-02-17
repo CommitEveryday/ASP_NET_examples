@@ -16,6 +16,17 @@ namespace WebApp
         {
             log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
             System.Diagnostics.Debug.WriteLine(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            Literal lit1 = new Literal();
+            Literal lit2 = new Literal();
+            Literal lit3 = new Literal();
+            string text = @"This is <font size=7>cool</font>";//<script>alert('hi!');</script>";
+            lit1.Text = lit2.Text = lit3.Text = text;
+            lit1.Mode = LiteralMode.Transform;
+            lit2.Mode = LiteralMode.PassThrough;
+            lit3.Mode = LiteralMode.Encode;
+            DivLiteral.Controls.Add(lit1);
+            DivLiteral.Controls.Add(lit2);
+            DivLiteral.Controls.Add(lit3);
         }
 
         protected void Page_Init(object sender, EventArgs e)

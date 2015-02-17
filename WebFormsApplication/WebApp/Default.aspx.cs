@@ -25,13 +25,19 @@ namespace WebApp
             TextBox tb = new TextBox();
             tb.Visible = true;
             tb.ID = "tbID";
-            tb.Text = "This is textbox!";
+            tb.Text = "This is textbox! " + default(double).ToString();
             tb.AccessKey = "Q";
             form1.Controls.Add(tb);
             log.Debug("TextBox created!");
             this.Button3.Style.Add(HtmlTextWriterStyle.Position, "absolute");
             this.Button3.Style.Add(HtmlTextWriterStyle.Top, "200px");
             this.Button3.Style.Add(HtmlTextWriterStyle.Left, "300px");
+
+            ListBox1.Items.Clear();
+            foreach (TextBoxMode tbm in Enum.GetValues(typeof(TextBoxMode)))
+            {
+                ListBox1.Items.Add(tbm.ToString());
+            }
         }
 
         protected void Page_PreRender(object sender, EventArgs e)
@@ -64,6 +70,35 @@ namespace WebApp
             Div1.InnerText = Text1.Value;
             TextBox txb = (TextBox)FindControl("tbID");
             txb.BackColor = System.Drawing.Color.Red;
+        }
+
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            CheckBox cb = sender as CheckBox;
+            if (cb == null)
+                return;
+            cb.Text = cb.Checked ? "Checked" : "NotChecked";
+        }
+
+        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ListBox1.SelectedItem == null)
+                return;
+            foreach (TextBoxMode tbm in Enum.GetValues(typeof(TextBoxMode)))
+            {
+                if (tbm.ToString() == ListBox1.SelectedItem.ToString())
+                {
+                    TextBox1.TextMode = tbm;
+                    break;
+                }
+            }
+            
+        }
+
+        protected void Button4_Command(object sender, CommandEventArgs e)
+        {
+
         }
     }
 }

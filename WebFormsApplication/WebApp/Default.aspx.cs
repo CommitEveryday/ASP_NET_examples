@@ -15,11 +15,13 @@ namespace WebApp
         protected void Page_Load(object sender, EventArgs e)
         {
             log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            System.Diagnostics.Debug.WriteLine(System.Reflection.MethodBase.GetCurrentMethod().Name);
         }
 
         protected void Page_Init(object sender, EventArgs e)
         {
             log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            System.Diagnostics.Debug.WriteLine(System.Reflection.MethodBase.GetCurrentMethod().Name);
             TextBox tb = new TextBox();
             tb.Visible = true;
             tb.ID = "tbID";
@@ -30,6 +32,24 @@ namespace WebApp
             this.Button3.Style.Add(HtmlTextWriterStyle.Position, "absolute");
             this.Button3.Style.Add(HtmlTextWriterStyle.Top, "200px");
             this.Button3.Style.Add(HtmlTextWriterStyle.Left, "300px");
+        }
+
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            System.Diagnostics.Debug.WriteLine(System.Reflection.MethodBase.GetCurrentMethod().Name);
+        }
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            System.Diagnostics.Debug.WriteLine(System.Reflection.MethodBase.GetCurrentMethod().Name);
+        }
+
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            log.Info(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            System.Diagnostics.Debug.WriteLine(System.Reflection.MethodBase.GetCurrentMethod().Name);
         }
 
         protected void Button2_Click(object sender, EventArgs e)

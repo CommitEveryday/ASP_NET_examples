@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApp2 {
+namespace WebApp2.TestControls {
     
     
-    public partial class Default {
+    public partial class ImageButton {
         
         /// <summary>
         /// form1 control.

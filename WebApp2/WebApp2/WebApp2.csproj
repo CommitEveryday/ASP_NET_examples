@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -53,6 +52,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TestControls\ImageButton.aspx" />
+    <Content Include="TestControls\ImageMap.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -69,6 +69,13 @@
     </Compile>
     <Compile Include="TestControls\ImageButton.aspx.designer.cs">
       <DependentUpon>ImageButton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\ImageMap.aspx.cs">
+      <DependentUpon>ImageMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\ImageMap.aspx.designer.cs">
+      <DependentUpon>ImageMap.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

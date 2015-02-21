@@ -51,6 +51,7 @@
     <Content Include="Images\chart.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="TestControls\Calendar.aspx" />
     <Content Include="TestControls\ImageButton.aspx" />
     <Content Include="TestControls\ImageMap.aspx" />
     <Content Include="Web.config" />
@@ -63,6 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestControls\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TestControls\ImageButton.aspx.cs">
       <DependentUpon>ImageButton.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

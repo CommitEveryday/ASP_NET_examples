@@ -55,6 +55,7 @@
     <Content Include="TestControls\FileUpload.aspx" />
     <Content Include="TestControls\ImageButton.aspx" />
     <Content Include="TestControls\ImageMap.aspx" />
+    <Content Include="TestControls\Panel.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,6 +93,13 @@
     </Compile>
     <Compile Include="TestControls\ImageMap.aspx.designer.cs">
       <DependentUpon>ImageMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\Panel.aspx.cs">
+      <DependentUpon>Panel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\Panel.aspx.designer.cs">
+      <DependentUpon>Panel.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

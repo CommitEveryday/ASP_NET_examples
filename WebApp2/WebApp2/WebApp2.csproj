@@ -52,6 +52,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TestControls\Calendar.aspx" />
+    <Content Include="TestControls\FileUpload.aspx" />
     <Content Include="TestControls\ImageButton.aspx" />
     <Content Include="TestControls\ImageMap.aspx" />
     <Content Include="Web.config" />
@@ -70,6 +71,13 @@
     </Compile>
     <Compile Include="TestControls\Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestControls\ImageButton.aspx.cs">
       <DependentUpon>ImageButton.aspx</DependentUpon>

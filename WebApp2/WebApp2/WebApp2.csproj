@@ -56,6 +56,7 @@
     <Content Include="TestControls\ImageButton.aspx" />
     <Content Include="TestControls\ImageMap.aspx" />
     <Content Include="TestControls\Panel.aspx" />
+    <Content Include="TestControls\MultiView.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -100,6 +101,13 @@
     </Compile>
     <Compile Include="TestControls\Panel.aspx.designer.cs">
       <DependentUpon>Panel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\MultiView.aspx.cs">
+      <DependentUpon>MultiView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\MultiView.aspx.designer.cs">
+      <DependentUpon>MultiView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

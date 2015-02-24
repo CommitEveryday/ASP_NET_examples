@@ -57,6 +57,7 @@
     <Content Include="TestControls\ImageMap.aspx" />
     <Content Include="TestControls\Panel.aspx" />
     <Content Include="TestControls\MultiView.aspx" />
+    <Content Include="TestControls\Wizard.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="TestControls\MultiView.aspx.designer.cs">
       <DependentUpon>MultiView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\Wizard.aspx.cs">
+      <DependentUpon>Wizard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\Wizard.aspx.designer.cs">
+      <DependentUpon>Wizard.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

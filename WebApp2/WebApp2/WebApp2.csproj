@@ -48,9 +48,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\chart.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Images\chart.png" />
     <Content Include="TestControls\Calendar.aspx" />
     <Content Include="TestControls\FileUpload.aspx" />
     <Content Include="TestControls\ImageButton.aspx" />
@@ -58,6 +56,7 @@
     <Content Include="TestControls\Panel.aspx" />
     <Content Include="TestControls\MultiView.aspx" />
     <Content Include="TestControls\Wizard.aspx" />
+    <Content Include="TestControls\XmlControl.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -65,6 +64,8 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="XmlData\person.xml" />
+    <Content Include="XmlData\person.xsl" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="TestControls\Wizard.aspx.designer.cs">
       <DependentUpon>Wizard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\XmlControl.aspx.cs">
+      <DependentUpon>XmlControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\XmlControl.aspx.designer.cs">
+      <DependentUpon>XmlControl.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

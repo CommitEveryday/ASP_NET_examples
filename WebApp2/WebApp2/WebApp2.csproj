@@ -50,6 +50,7 @@
   <ItemGroup>
     <Content Include="Images\chart.png" />
     <Content Include="TestControls\Calendar.aspx" />
+    <Content Include="TestControls\DropDownList.aspx" />
     <Content Include="TestControls\FileUpload.aspx" />
     <Content Include="TestControls\ImageButton.aspx" />
     <Content Include="TestControls\ImageMap.aspx" />
@@ -75,6 +76,14 @@
     </Compile>
     <Compile Include="TestControls\Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\Car.cs" />
+    <Compile Include="TestControls\DropDownList.aspx.cs">
+      <DependentUpon>DropDownList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\DropDownList.aspx.designer.cs">
+      <DependentUpon>DropDownList.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestControls\FileUpload.aspx.cs">
       <DependentUpon>FileUpload.aspx</DependentUpon>

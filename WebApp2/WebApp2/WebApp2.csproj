@@ -54,6 +54,7 @@
     <Content Include="TestControls\FileUpload.aspx" />
     <Content Include="TestControls\ImageButton.aspx" />
     <Content Include="TestControls\ImageMap.aspx" />
+    <Content Include="TestControls\ListBox.aspx" />
     <Content Include="TestControls\Panel.aspx" />
     <Content Include="TestControls\MultiView.aspx" />
     <Content Include="TestControls\Wizard.aspx" />
@@ -105,6 +106,13 @@
     </Compile>
     <Compile Include="TestControls\ImageMap.aspx.designer.cs">
       <DependentUpon>ImageMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\ListBox.aspx.cs">
+      <DependentUpon>ListBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\ListBox.aspx.designer.cs">
+      <DependentUpon>ListBox.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestControls\Panel.aspx.cs">
       <DependentUpon>Panel.aspx</DependentUpon>

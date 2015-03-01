@@ -13,6 +13,9 @@ namespace WebApp2.TestControls
         public int Year { get; set; }
         public decimal Price { get; set; }
 
+        public Car()
+        { }
+
         public Car(string vin, string make, string model, int year, decimal price)
         {
             Vin = vin;

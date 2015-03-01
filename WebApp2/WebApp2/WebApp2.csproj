@@ -54,6 +54,7 @@
     <Content Include="TestControls\Calendar.aspx" />
     <Content Include="TestControls\DropDownList.aspx" />
     <Content Include="TestControls\FileUpload.aspx" />
+    <Content Include="TestControls\GridView.aspx" />
     <Content Include="TestControls\ImageButton.aspx" />
     <Content Include="TestControls\ImageMap.aspx" />
     <Content Include="TestControls\ListBox.aspx" />
@@ -96,6 +97,7 @@
       <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestControls\Car.cs" />
+    <Compile Include="TestControls\CarList.cs" />
     <Compile Include="TestControls\DropDownList.aspx.cs">
       <DependentUpon>DropDownList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -109,6 +111,13 @@
     </Compile>
     <Compile Include="TestControls\FileUpload.aspx.designer.cs">
       <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\GridView.aspx.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\GridView.aspx.designer.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestControls\ImageButton.aspx.cs">
       <DependentUpon>ImageButton.aspx</DependentUpon>

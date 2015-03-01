@@ -15,8 +15,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Button" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:ListBox ID="ListBox2" runat="server" Height="198px" Width="224px">
-        </asp:ListBox>
+        <asp:ListBox ID="ListBox2" runat="server" EnableViewState="False" 
+            Height="198px" Width="224px"></asp:ListBox>
     
     </div>
     </form>

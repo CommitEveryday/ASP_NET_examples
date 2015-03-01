@@ -55,6 +55,7 @@
     <Content Include="TestControls\ImageButton.aspx" />
     <Content Include="TestControls\ImageMap.aspx" />
     <Content Include="TestControls\ListBox.aspx" />
+    <Content Include="TestControls\Lists.aspx" />
     <Content Include="TestControls\Panel.aspx" />
     <Content Include="TestControls\MultiView.aspx" />
     <Content Include="TestControls\Wizard.aspx" />
@@ -113,6 +114,13 @@
     </Compile>
     <Compile Include="TestControls\ListBox.aspx.designer.cs">
       <DependentUpon>ListBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\Lists.aspx.cs">
+      <DependentUpon>Lists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\Lists.aspx.designer.cs">
+      <DependentUpon>Lists.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestControls\Panel.aspx.cs">
       <DependentUpon>Panel.aspx</DependentUpon>

@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\chart.png" />
+    <Content Include="TestControls\BulletedList.aspx" />
     <Content Include="TestControls\Calendar.aspx" />
     <Content Include="TestControls\DropDownList.aspx" />
     <Content Include="TestControls\FileUpload.aspx" />
@@ -72,6 +73,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestControls\BulletedList.aspx.cs">
+      <DependentUpon>BulletedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\BulletedList.aspx.designer.cs">
+      <DependentUpon>BulletedList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TestControls\Calendar.aspx.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

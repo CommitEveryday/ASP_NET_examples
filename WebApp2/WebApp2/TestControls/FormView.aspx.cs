@@ -16,7 +16,8 @@ namespace WebApp2.TestControls
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            CarList.Initialize();
+            FormView1.DataBind();
         }
     }
 }

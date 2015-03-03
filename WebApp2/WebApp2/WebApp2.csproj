@@ -55,6 +55,7 @@
     <Content Include="TestControls\DetailsView.aspx" />
     <Content Include="TestControls\DropDownList.aspx" />
     <Content Include="TestControls\FileUpload.aspx" />
+    <Content Include="TestControls\FormView.aspx" />
     <Content Include="TestControls\GridView.aspx" />
     <Content Include="TestControls\ImageButton.aspx" />
     <Content Include="TestControls\ImageMap.aspx" />
@@ -119,6 +120,13 @@
     </Compile>
     <Compile Include="TestControls\FileUpload.aspx.designer.cs">
       <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\FormView.aspx.cs">
+      <DependentUpon>FormView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\FormView.aspx.designer.cs">
+      <DependentUpon>FormView.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestControls\GridView.aspx.cs">
       <DependentUpon>GridView.aspx</DependentUpon>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Customers>
+    <Customer CustomerID="1" Name="Name 1">
+        <Orders>
+            <Order OrderId="1" ShipDate="06-22-2006">
+                <OrderItem OrderItemId="1" PartNumber="123" PartDescription="Large Widget"
+                           Quantity="5" Price="22.00" />
+            </Order>
+        </Orders>
+        <Invoices>
+            <Invose InvoceId="6" Amount="99.37" />
+            <Invose InvoceId="7" Amount="147.50" />
+        </Invoices>
+    </Customer>
+</Customers>

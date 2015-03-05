@@ -63,6 +63,7 @@
     <Content Include="TestControls\Lists.aspx" />
     <Content Include="TestControls\Panel.aspx" />
     <Content Include="TestControls\MultiView.aspx" />
+    <Content Include="TestControls\TreeView.aspx" />
     <Content Include="TestControls\Wizard.aspx" />
     <Content Include="TestControls\XmlControl.aspx" />
     <Content Include="Web.config" />
@@ -71,6 +72,9 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="XmlData\Customers.xml">
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="XmlData\person.xml" />
     <Content Include="XmlData\person.xsl" />
@@ -176,6 +180,13 @@
     </Compile>
     <Compile Include="TestControls\MultiView.aspx.designer.cs">
       <DependentUpon>MultiView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestControls\TreeView.aspx.cs">
+      <DependentUpon>TreeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestControls\TreeView.aspx.designer.cs">
+      <DependentUpon>TreeView.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestControls\Wizard.aspx.cs">
       <DependentUpon>Wizard.aspx</DependentUpon>

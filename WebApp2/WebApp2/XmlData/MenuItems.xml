@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MenuItems>
+    <Home display="Home" url="~/" />
+    <Products display="Products" url="~/products">
+        <SmallWidgets display="Small Widgets" url="~/products/SmallWidgets.aspx" />
+        <SmallWidgets2 display="Small Widgets2" url="~/products/SmallWidgets2.aspx" />
+    </Products>
+    <Support display="Support" url="~/Support">
+        <SmallWidgets display="Small Widgets" url="~/products/SmallWidgets.aspx" />
+        <SmallWidgets2 display="Small Widgets2" url="~/products/SmallWidgets2.aspx" />
+    </Support>
+</MenuItems>

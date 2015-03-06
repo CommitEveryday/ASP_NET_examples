@@ -67,6 +67,7 @@
     <Content Include="TestControls\TreeView.aspx" />
     <Content Include="TestControls\Wizard.aspx" />
     <Content Include="TestControls\XmlControl.aspx" />
+    <Content Include="UsingDataBoundControls\Default.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -210,6 +211,15 @@
     </Compile>
     <Compile Include="TestControls\XmlControl.aspx.designer.cs">
       <DependentUpon>XmlControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsingDataBoundControls\Customer.cs" />
+    <Compile Include="UsingDataBoundControls\CustomerList.cs" />
+    <Compile Include="UsingDataBoundControls\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsingDataBoundControls\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

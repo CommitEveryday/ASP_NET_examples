@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\chart.png" />
+    <Content Include="TestADO.NET\WebFormDataTable.aspx" />
     <Content Include="TestControls\AdRotator.aspx" />
     <Content Include="TestControls\BulletedList.aspx" />
     <Content Include="TestControls\Calendar.aspx" />
@@ -84,6 +85,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestADO.NET\WebFormDataTable.aspx.cs">
+      <DependentUpon>WebFormDataTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestADO.NET\WebFormDataTable.aspx.designer.cs">
+      <DependentUpon>WebFormDataTable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TestControls\AdRotator.aspx.cs">
       <DependentUpon>AdRotator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

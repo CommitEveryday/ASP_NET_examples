@@ -19,6 +19,14 @@ namespace WebApp2.TestADO.NET
         {
             DataTable employee = new DataTable("Employee");
 
+            DataColumn eid = new DataColumn("Eid");
+            eid.DataType = typeof(string);
+            eid.MaxLength = 10;
+            eid.Unique = true;
+            eid.AllowDBNull = false;
+            eid.Caption = "EID";
+            employee.Columns.Add(eid);
+
             return employee;
         }
     }

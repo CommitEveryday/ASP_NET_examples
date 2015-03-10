@@ -27,6 +27,11 @@ namespace WebApp2.TestADO.NET
             eid.Caption = "EID";
             employee.Columns.Add(eid);
 
+            DataColumn firstName = new DataColumn("FirstName");
+            firstName.MaxLength = 35;
+            firstName.AllowDBNull = false;
+            employee.Columns.Add(firstName);
+
             return employee;
         }
     }

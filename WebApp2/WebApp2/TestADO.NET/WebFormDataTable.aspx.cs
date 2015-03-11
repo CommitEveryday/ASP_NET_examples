@@ -32,6 +32,10 @@ namespace WebApp2.TestADO.NET
             firstName.AllowDBNull = false;
             employee.Columns.Add(firstName);
 
+            DataColumn lastName = new DataColumn("LastName");
+            lastName.AllowDBNull = false;
+            employee.Columns.Add(lastName);
+
             return employee;
         }
     }

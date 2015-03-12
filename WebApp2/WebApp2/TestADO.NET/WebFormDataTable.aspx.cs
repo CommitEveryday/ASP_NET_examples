@@ -36,6 +36,10 @@ namespace WebApp2.TestADO.NET
             lastName.AllowDBNull = false;
             employee.Columns.Add(lastName);
 
+            DataColumn salary = new DataColumn("Salary", typeof(decimal));
+            salary.DefaultValue = 0.00m;
+            employee.Columns.Add(salary);
+
             return employee;
         }
     }

@@ -40,6 +40,12 @@ namespace WebApp2.TestADO.NET
             salary.DefaultValue = 0.00m;
             employee.Columns.Add(salary);
 
+            DataColumn lastNameFirstName = new DataColumn("LastName and FirstName");
+            lastNameFirstName.DataType = typeof(string);
+            lastNameFirstName.MaxLength = 70;
+            lastNameFirstName.Expression = "lastName + ', ' + firstName";
+            employee.Columns.Add(lastNameFirstName);
+
             return employee;
         }
     }

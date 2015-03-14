@@ -46,6 +46,8 @@ namespace WebApp2.TestADO.NET
             lastNameFirstName.Expression = "lastName + ', ' + firstName";
             employee.Columns.Add(lastNameFirstName);
 
+            employee.PrimaryKey = new DataColumn[] { eid };
+
             return employee;
         }
     }

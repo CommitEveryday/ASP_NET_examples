@@ -48,6 +48,15 @@ namespace WebApp2.TestADO.NET
 
             employee.PrimaryKey = new DataColumn[] { eid };
 
+            DataRow newEmployee = employee.NewRow();
+            newEmployee["Eid"] = "123456789A";
+            newEmployee["FirstName"] = "Nancy";
+            newEmployee["LastName"] = "Davolio";
+            newEmployee["Salary"] = 10.00m;
+            employee.Rows.Add(newEmployee);
+
+
+
             return employee;
         }
     }

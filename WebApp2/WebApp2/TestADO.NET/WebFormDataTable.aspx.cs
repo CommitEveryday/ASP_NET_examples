@@ -55,7 +55,7 @@ namespace WebApp2.TestADO.NET
             newEmployee["Salary"] = 10.00m;
             employee.Rows.Add(newEmployee);
 
-
+            employee.Rows.Add("987654321X", "Andrew", "Fuller", 15.00m);
 
             return employee;
         }

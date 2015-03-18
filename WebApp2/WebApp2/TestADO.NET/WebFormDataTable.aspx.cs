@@ -57,6 +57,9 @@ namespace WebApp2.TestADO.NET
 
             employee.Rows.Add("987654321X", "Andrew", "Fuller", 15.00m);
 
+            employee.LoadDataRow(new object[] { "987654321X", "Janet", "Leverling", 20.00m },
+                LoadOption.OverwriteChanges);
+
             return employee;
         }
     }

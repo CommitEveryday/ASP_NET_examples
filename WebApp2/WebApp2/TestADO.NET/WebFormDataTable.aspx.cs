@@ -43,7 +43,7 @@ namespace WebApp2.TestADO.NET
             DataColumn lastNameFirstName = new DataColumn("LastName and FirstName");
             lastNameFirstName.DataType = typeof(string);
             lastNameFirstName.MaxLength = 70;
-            lastNameFirstName.Expression = "lastName + ', ' + firstName";
+            lastNameFirstName.Expression = "lastName + ', ' + FirstName";
             employee.Columns.Add(lastNameFirstName);
 
             employee.PrimaryKey = new DataColumn[] { eid };
@@ -61,6 +61,19 @@ namespace WebApp2.TestADO.NET
                 LoadOption.OverwriteChanges);
 
             return employee;
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            GridView gv = new GridView();
+            gv.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+            gv.Style.Add(HtmlTextWriterStyle.Left, "275px");
+            gv.Style.Add(HtmlTextWriterStyle.Top, "20px");
+            gv.EnableViewState = false;
+            form1.Controls.Add(gv);
+
+            gv.DataSource = GetDataTable();
+            gv.DataBind();
         }
     }
 }

@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+        <asp:Button ID="Button1" runat="server" Text="Get and Bind DataTable" 
+            onclick="Button1_Click" />
     </div>
     </form>
 </body>

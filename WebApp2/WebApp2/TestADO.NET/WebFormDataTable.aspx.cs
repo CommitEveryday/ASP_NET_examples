@@ -75,5 +75,25 @@ namespace WebApp2.TestADO.NET
             gv.DataSource = GetDataTable();
             gv.DataBind();
         }
+
+        private string GetDataRowInfo(DataRow row, string columnName)
+        {
+            string retVal = string.Format("RowState: {0}<br />",
+                row.RowState);
+            foreach (DataRowVersion version in Enum.GetValues(typeof(DataRowVersion)))
+            {
+                if (row.HasVersion(version))
+                {
+                    retVal += string.Format("Version: {0} Value: {1}<br />",
+                        version, row[columnName, version]);
+                }
+                else
+                {
+                    retVal += string.Format("Version: {0} does not exist.<br />",
+                        version);
+                }
+            }
+            return retVal;
+        }
     }
 }

@@ -95,5 +95,22 @@ namespace WebApp2.TestADO.NET
             }
             return retVal;
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Label lbl = new Label();
+            lbl.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+            lbl.Style.Add(HtmlTextWriterStyle.Left, "275px");
+            lbl.Style.Add(HtmlTextWriterStyle.Top, "20px");
+            lbl.EnableViewState = false;
+            form1.Controls.Add(lbl);
+            DataRow dr = GetDataTable().Rows[0];
+            dr.AcceptChanges();
+            dr["FirstName"] = "Marie";
+            dr.BeginEdit();
+            dr["FirstName"] = "Marge";
+            lbl.Text = GetDataRowInfo(dr, "Firstname");
+            dr.EndEdit();
+        }
     }
 }

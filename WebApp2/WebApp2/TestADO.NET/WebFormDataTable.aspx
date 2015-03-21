@@ -11,6 +11,9 @@
     <div>
         <asp:Button ID="Button1" runat="server" Text="Get and Bind DataTable" 
             onclick="Button1_Click" />
+        <br />
+        <asp:Button ID="Button2" runat="server" onclick="Button2_Click" 
+            Text="DataRowVersion" />
     </div>
     </form>
 </body>

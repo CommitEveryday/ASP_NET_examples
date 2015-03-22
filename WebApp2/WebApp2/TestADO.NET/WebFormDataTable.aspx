@@ -14,6 +14,20 @@
         <br />
         <asp:Button ID="Button2" runat="server" onclick="Button2_Click" 
             Text="DataRowVersion" />
+        <br />
+        <asp:Button ID="Button3" runat="server" Text="Copy DataTable" />
+        <br />
+        <asp:Button ID="Button4" runat="server" Text="Clone DataTable and ImportRow" />
+        <br />
+        <asp:Button ID="Button5" runat="server" Text="Create Employee XML File" />
+        <br />
+        <asp:Button ID="Button6" runat="server" Text="Create Formatted XML File" />
+        <br />
+        <asp:Button ID="Button7" runat="server" Text="Create XML File w/Schema" />
+        <br />
+        <asp:Button ID="Button8" runat="server" Text="Read XML File w/Schema" />
+        <br />
+        <asp:Button ID="Button9" runat="server" Text="Sort With DataView" />
     </div>
     </form>
 </body>

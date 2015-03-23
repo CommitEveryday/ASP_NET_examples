@@ -15,7 +15,8 @@
         <asp:Button ID="Button2" runat="server" onclick="Button2_Click" 
             Text="DataRowVersion" />
         <br />
-        <asp:Button ID="Button3" runat="server" Text="Copy DataTable" />
+        <asp:Button ID="Button3" runat="server" onclick="Button3_Click" 
+            Text="Copy DataTable" />
         <br />
         <asp:Button ID="Button4" runat="server" Text="Clone DataTable and ImportRow" />
         <br />

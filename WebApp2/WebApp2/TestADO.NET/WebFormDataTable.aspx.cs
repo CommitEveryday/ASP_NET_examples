@@ -112,5 +112,18 @@ namespace WebApp2.TestADO.NET
             lbl.Text = GetDataRowInfo(dr, "Firstname");
             dr.EndEdit();
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            GridView gv = new GridView();
+            gv.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+            gv.Style.Add(HtmlTextWriterStyle.Left, "275px");
+            gv.Style.Add(HtmlTextWriterStyle.Top, "20px");
+            gv.EnableViewState = false;
+            form1.Controls.Add(gv);
+
+            gv.DataSource = GetDataTable().Copy();
+            gv.DataBind();
+        }
     }
 }

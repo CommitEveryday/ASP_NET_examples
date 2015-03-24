@@ -18,7 +18,8 @@
         <asp:Button ID="Button3" runat="server" onclick="Button3_Click" 
             Text="Copy DataTable" />
         <br />
-        <asp:Button ID="Button4" runat="server" Text="Clone DataTable and ImportRow" />
+        <asp:Button ID="Button4" runat="server" onclick="Button4_Click" 
+            Text="Clone DataTable and ImportRow" />
         <br />
         <asp:Button ID="Button5" runat="server" Text="Create Employee XML File" />
         <br />

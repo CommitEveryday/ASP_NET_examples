@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Web.UI.HtmlControls;
 
 namespace WebApp2.TestADO.NET
 {
@@ -65,12 +66,7 @@ namespace WebApp2.TestADO.NET
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            GridView gv = new GridView();
-            gv.Style.Add(HtmlTextWriterStyle.Position, "absolute");
-            gv.Style.Add(HtmlTextWriterStyle.Left, "275px");
-            gv.Style.Add(HtmlTextWriterStyle.Top, "20px");
-            gv.EnableViewState = false;
-            form1.Controls.Add(gv);
+            GridView gv = AddGridView(form1);
 
             gv.DataSource = GetDataTable();
             gv.DataBind();
@@ -115,15 +111,26 @@ namespace WebApp2.TestADO.NET
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            GridView gv = AddGridView(form1);
+
+            gv.DataSource = GetDataTable().Copy();
+            gv.DataBind();
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private GridView AddGridView(HtmlForm form)
+        {
             GridView gv = new GridView();
             gv.Style.Add(HtmlTextWriterStyle.Position, "absolute");
             gv.Style.Add(HtmlTextWriterStyle.Left, "275px");
             gv.Style.Add(HtmlTextWriterStyle.Top, "20px");
             gv.EnableViewState = false;
-            form1.Controls.Add(gv);
-
-            gv.DataSource = GetDataTable().Copy();
-            gv.DataBind();
+            form.Controls.Add(gv);
+            return gv;
         }
     }
 }

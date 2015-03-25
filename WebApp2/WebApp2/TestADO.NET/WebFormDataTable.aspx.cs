@@ -112,14 +112,18 @@ namespace WebApp2.TestADO.NET
         protected void Button3_Click(object sender, EventArgs e)
         {
             GridView gv = AddGridView(form1);
-
             gv.DataSource = GetDataTable().Copy();
             gv.DataBind();
         }
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-
+            GridView gv = AddGridView(form1);
+            DataTable employee = GetDataTable();
+            DataTable clone = employee.Clone();
+            clone.ImportRow(employee.Rows[0]);
+            gv.DataSource = clone;
+            gv.DataBind();
         }
 
         private GridView AddGridView(HtmlForm form)

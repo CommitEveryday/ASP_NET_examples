@@ -58,48 +58,48 @@ namespace WebApp2.TestADO.NET {
         protected global::System.Web.UI.WebControls.Button Button4;
         
         /// <summary>
-        /// Button5 control.
+        /// btCreateXML control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button btCreateXML;
         
         /// <summary>
-        /// Button6 control.
+        /// btCreateFormXML control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
+        protected global::System.Web.UI.WebControls.Button btCreateFormXML;
         
         /// <summary>
-        /// Button7 control.
+        /// btCreateXMLwSchema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
+        protected global::System.Web.UI.WebControls.Button btCreateXMLwSchema;
         
         /// <summary>
-        /// Button8 control.
+        /// btReadXMLwSchema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.Button btReadXMLwSchema;
         
         /// <summary>
-        /// Button9 control.
+        /// crSortDataView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button9;
+        protected global::System.Web.UI.WebControls.Button crSortDataView;
     }
 }

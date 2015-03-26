@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Employee>
+    <Eid>123456789A</Eid>
+    <FirstName>Nancy</FirstName>
+    <LastName>Davolio</LastName>
+    <Salary>10.00</Salary>
+    <LastName_x0020_and_x0020_FirstName>Davolio, Nancy</LastName_x0020_and_x0020_FirstName>
+  </Employee>
+  <Employee>
+    <Eid>987654321X</Eid>
+    <FirstName>Janet</FirstName>
+    <LastName>Leverling</LastName>
+    <Salary>20.00</Salary>
+    <LastName_x0020_and_x0020_FirstName>Leverling, Janet</LastName_x0020_and_x0020_FirstName>
+  </Employee>
+</DocumentElement>

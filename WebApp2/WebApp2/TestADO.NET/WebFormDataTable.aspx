@@ -21,7 +21,8 @@
         <asp:Button ID="Button4" runat="server" onclick="Button4_Click" 
             Text="Clone DataTable and ImportRow" />
         <br />
-        <asp:Button ID="btCreateXML" runat="server" Text="Create Employee XML File" />
+        <asp:Button ID="btCreateXML" runat="server" onclick="btCreateXML_Click" 
+            Text="Create Employee XML File" />
         <br />
         <asp:Button ID="btCreateFormXML" runat="server" 
             Text="Create Formatted XML File" />

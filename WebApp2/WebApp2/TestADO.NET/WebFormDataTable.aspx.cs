@@ -136,5 +136,13 @@ namespace WebApp2.TestADO.NET
             form.Controls.Add(gv);
             return gv;
         }
+
+        protected void btCreateXML_Click(object sender, EventArgs e)
+        {
+            DataTable employee = GetDataTable();
+            string fileName = "employee.xml";
+            employee.WriteXml(Server.MapPath(fileName));
+            Response.Redirect(fileName);
+        }
     }
 }

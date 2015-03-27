@@ -24,7 +24,7 @@
         <asp:Button ID="btCreateXML" runat="server" onclick="btCreateXML_Click" 
             Text="Create Employee XML File" />
         <br />
-        <asp:Button ID="btCreateFormXML" runat="server" 
+        <asp:Button ID="btCreateFormXML" runat="server" onclick="btCreateFormXML_Click" 
             Text="Create Formatted XML File" />
         <br />
         <asp:Button ID="btCreateXMLwSchema" runat="server" 

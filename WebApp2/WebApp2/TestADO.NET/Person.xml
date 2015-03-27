@@ -1,0 +1,5 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Person Eid="123456789A" FirstName="Nancy" LastName="Davolio" Salary="10.00" />
+  <Person Eid="987654321X" FirstName="Janet" LastName="Leverling" Salary="20.00" />
+</DocumentElement>

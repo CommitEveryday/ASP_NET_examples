@@ -28,7 +28,7 @@
             Text="Create Formatted XML File" />
         <br />
         <asp:Button ID="btCreateXMLwSchema" runat="server" 
-            Text="Create XML File w/Schema" />
+            onclick="btCreateXMLwSchema_Click" Text="Create XML File w/Schema" />
         <br />
         <asp:Button ID="btReadXMLwSchema" runat="server" 
             Text="Read XML File w/Schema" />

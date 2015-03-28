@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Person" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Person">
+            <xs:complexType>
+              <xs:attribute name="Eid" msdata:Caption="EID" use="required">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:attribute>
+              <xs:attribute name="FirstName" use="required">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:attribute>
+              <xs:attribute name="LastName" type="xs:string" use="required" />
+              <xs:attribute name="Salary" type="xs:decimal" default="0.00" />
+              <xs:attribute name="LastName_x0020_and_x0020_FirstName" msdata:ReadOnly="true" msdata:Expression="lastName + ', ' + FirstName" use="prohibited">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:attribute>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Person" />
+        <xs:field xpath="@Eid" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Person Eid="123456789A" FirstName="Nancy" LastName="Davolio" Salary="10.00" />
+  <Person Eid="987654321X" FirstName="Janet" LastName="Leverling" Salary="20.00" />
+</NewDataSet>

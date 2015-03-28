@@ -158,5 +158,19 @@ namespace WebApp2.TestADO.NET
             employee.WriteXml(Server.MapPath(fileName));
             Response.Redirect(fileName);
         }
+
+        protected void btCreateXMLwSchema_Click(object sender, EventArgs e)
+        {
+            DataTable employee = GetDataTable();
+            employee.TableName = "Person";
+            employee.Columns["Eid"].ColumnMapping = MappingType.Attribute;
+            employee.Columns["FirstName"].ColumnMapping = MappingType.Attribute;
+            employee.Columns["LastName"].ColumnMapping = MappingType.Attribute;
+            employee.Columns["Salary"].ColumnMapping = MappingType.Attribute;
+            employee.Columns["LastName and FirstName"].ColumnMapping = MappingType.Hidden;
+            string fileName = "PersonWithSchema.xml";
+            employee.WriteXml(Server.MapPath(fileName), XmlWriteMode.WriteSchema);
+            Response.Redirect(fileName);
+        }
     }
 }

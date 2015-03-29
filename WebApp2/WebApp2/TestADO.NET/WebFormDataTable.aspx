@@ -31,7 +31,7 @@
             onclick="btCreateXMLwSchema_Click" Text="Create XML File w/Schema" />
         <br />
         <asp:Button ID="btReadXMLwSchema" runat="server" 
-            Text="Read XML File w/Schema" />
+            onclick="btReadXMLwSchema_Click" Text="Read XML File w/Schema" />
         <br />
         <asp:Button ID="crSortDataView" runat="server" Text="Sort With DataView" />
     </div>

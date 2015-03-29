@@ -172,5 +172,15 @@ namespace WebApp2.TestADO.NET
             employee.WriteXml(Server.MapPath(fileName), XmlWriteMode.WriteSchema);
             Response.Redirect(fileName);
         }
+
+        protected void btReadXMLwSchema_Click(object sender, EventArgs e)
+        {
+            string fileName = "PersonWithSchema.xml";
+            GridView gv = AddGridView(form1);
+            DataTable xmlTable = new DataTable();
+            xmlTable.ReadXml(Server.MapPath(fileName));
+            gv.DataSource = xmlTable;
+            gv.DataBind();
+        }
     }
 }

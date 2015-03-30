@@ -182,5 +182,21 @@ namespace WebApp2.TestADO.NET
             gv.DataSource = xmlTable;
             gv.DataBind();
         }
+
+        protected void crSortDataView_Click(object sender, EventArgs e)
+        {
+            GridView gv = AddGridView(form1);
+
+            DataTable employee = GetDataTable();
+            employee.Rows.Add("ABC345DEF1", "Thomas", "Andersen", 25.00m);
+            employee.Rows.Add("123ABC345D", "Sean", "Chai", 20.00m);
+            employee.Rows.Add("345DEF123A", "Erik", "Andersen", 22.00m);
+            employee.Rows.Add("DEF123ABC3", "Nancy", "Andersen", 8.00m);
+
+            DataView view = new DataView(employee);
+            view.Sort = "LastName ASC, FirstName ASC, Salary DESC";
+            gv.DataSource = view;
+            gv.DataBind();
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace WebApp2.TestADO.NET
             employee.Columns.Add("LastName", typeof(string));
             employee.Columns.Add("FirstName", typeof(string));
             employee.Columns.Add("Salary", typeof(decimal));
-            employee.PrimaryKey = new DataColumn[] { company.Columns["Id"] };
+            employee.PrimaryKey = new DataColumn[] { employee.Columns["Id"] };
 
             companyData.Relations.Add("Company_Employee",
                 company.Columns["Id"],
@@ -60,6 +60,42 @@ namespace WebApp2.TestADO.NET
             employee.Rows.Add(empId, coId, "TomLast", "TomFirst", 68.00);
             empId = Guid.NewGuid();
             employee.Rows.Add(empId, coId, "MikeLast", "MikeFirst", 18.99);
+        }
+
+        private GridView GetGridView(int left, int top)
+        {
+            GridView gv = new GridView();
+            gv.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+            gv.Style.Add(HtmlTextWriterStyle.Left, left.ToString()+"px");
+            gv.Style.Add(HtmlTextWriterStyle.Top, top.ToString()+"px");
+            gv.EnableViewState = false;
+            form1.Controls.Add(gv);
+            return gv;
+        }
+
+        private Label GetLabel(int left, int top)
+        {
+            Label lbl = new Label();
+            lbl.Style.Add(HtmlTextWriterStyle.Position, "absolute");
+            lbl.Style.Add(HtmlTextWriterStyle.Left, left.ToString() + "px");
+            lbl.Style.Add(HtmlTextWriterStyle.Top, top.ToString() + "px");
+            lbl.EnableViewState = false;
+            form1.Controls.Add(lbl);
+            return lbl;
+        }
+
+        protected void btCreateBind_Click(object sender, EventArgs e)
+        {
+            GridView gvCompany = GetGridView(275, 20);
+            GridView gvEmployee = GetGridView(275, 125);
+            DataSet companyList = GetDataSet();
+            PopulateDataSet(companyList);
+            gvCompany.DataSource = companyList;
+            gvCompany.DataMember = "Company";
+            gvEmployee.DataSource = companyList;
+            gvEmployee.DataMember = "Employee";
+            gvCompany.DataBind();
+            gvEmployee.DataBind();
         }
     }
 }

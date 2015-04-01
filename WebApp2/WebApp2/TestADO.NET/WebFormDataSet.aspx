@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+        <asp:Button ID="btCreateBind" runat="server" Text="Create and Bind DataSet" 
+            onclick="btCreateBind_Click" />
     </div>
     </form>
 </body>

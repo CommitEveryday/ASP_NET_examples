@@ -38,5 +38,28 @@ namespace WebApp2.TestADO.NET
 
             return companyData;
         }
+
+        private void PopulateDataSet(DataSet ds)
+        {
+            DataTable company = ds.Tables["Company"];
+            DataTable employee = ds.Tables["Employee"];
+            Guid coId, empId;
+            coId = Guid.NewGuid();
+            company.Rows.Add(coId, "Northwind Traders");
+            empId = Guid.NewGuid();
+            employee.Rows.Add(empId, coId, "JoeLast", "JoeFirst", 40.00);
+            empId = Guid.NewGuid();
+            employee.Rows.Add(empId, coId, "MaryLast", "MaryFirst", 70.00);
+            empId = Guid.NewGuid();
+            employee.Rows.Add(empId, coId, "SamLast", "SamFirst", 12.00);
+            coId = Guid.NewGuid();
+            company.Rows.Add(coId, "Contoso");
+            empId = Guid.NewGuid();
+            employee.Rows.Add(empId, coId, "SueLast", "SueFirst", 20.00);
+            empId = Guid.NewGuid();
+            employee.Rows.Add(empId, coId, "TomLast", "TomFirst", 68.00);
+            empId = Guid.NewGuid();
+            employee.Rows.Add(empId, coId, "MikeLast", "MikeFirst", 18.99);
+        }
     }
 }

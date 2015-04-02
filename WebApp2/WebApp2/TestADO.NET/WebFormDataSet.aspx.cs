@@ -97,5 +97,31 @@ namespace WebApp2.TestADO.NET
             gvCompany.DataBind();
             gvEmployee.DataBind();
         }
+
+        protected void btDataRelation_Click(object sender, EventArgs e)
+        {
+            Label lbl = GetLabel(275, 20);
+            DataSet companyList = GetDataSet();
+            PopulateDataSet(companyList);
+            DataRelation dr = companyList.Relations["Company_Employee"];
+            DataRow companyParent = companyList.Tables["company"].Rows[1];
+            lbl.Text = companyParent["CompanyName"] + "<br />";
+            foreach (DataRow employeeChild in companyParent.GetChildRows(dr))
+            {
+                lbl.Text += "&nbsp;&nbsp;&nbsp;" + employeeChild["Id"] + " "
+                    + employeeChild["LastName"] + " "
+                    + employeeChild["FirstName"] + " "
+                    + string.Format("{0:C}", employeeChild["Salary"]) + "<br />";
+            }
+            lbl.Text += "<br /><br />";
+
+            DataRow employeeParent = companyList.Tables["employee"].Rows[1];
+            lbl.Text += employeeParent["Id"] + " "
+                    + employeeParent["LastName"] + " "
+                    + employeeParent["FirstName"] + " "
+                    + string.Format("{0:C}", employeeParent["Salary"]) + "<br />";
+            DataRow companyChild = employeeParent.GetParentRow(dr);
+            lbl.Text += "&nbsp;&nbsp;&nbsp;" + companyChild["CompanyName"] + "<br />";
+        }
     }
 }

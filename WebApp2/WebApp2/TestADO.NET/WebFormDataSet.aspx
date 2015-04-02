@@ -11,6 +11,9 @@
     <div>
         <asp:Button ID="btCreateBind" runat="server" Text="Create and Bind DataSet" 
             onclick="btCreateBind_Click" />
+        <br />
+        <asp:Button ID="btDataRelation" runat="server" onclick="btDataRelation_Click" 
+            Text="Navigate DataRelation" />
     </div>
     </form>
 </body>

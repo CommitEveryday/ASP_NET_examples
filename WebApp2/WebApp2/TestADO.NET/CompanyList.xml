@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="yes"?>
+<CompanyList>
+  <company>
+    <Id>aecd5169-938f-47a6-a8dd-ea4c84855984</Id>
+    <CompanyName>Northwind Traders</CompanyName>
+  </company>
+  <company>
+    <Id>3e462046-8720-407e-9ccf-f80ea384b24c</Id>
+    <CompanyName>Contoso</CompanyName>
+  </company>
+  <employee>
+    <Id>92cbc6a1-5439-4404-b499-f39f3c9de311</Id>
+    <CompanyId>aecd5169-938f-47a6-a8dd-ea4c84855984</CompanyId>
+    <LastName>JoeLast</LastName>
+    <FirstName>JoeFirst</FirstName>
+    <Salary>40</Salary>
+  </employee>
+  <employee>
+    <Id>91438334-f740-4f62-9337-4ad4ae1c73be</Id>
+    <CompanyId>aecd5169-938f-47a6-a8dd-ea4c84855984</CompanyId>
+    <LastName>MaryLast</LastName>
+    <FirstName>MaryFirst</FirstName>
+    <Salary>70</Salary>
+  </employee>
+  <employee>
+    <Id>942effc6-9f04-4166-9536-f91b5504e453</Id>
+    <CompanyId>aecd5169-938f-47a6-a8dd-ea4c84855984</CompanyId>
+    <LastName>SamLast</LastName>
+    <FirstName>SamFirst</FirstName>
+    <Salary>12</Salary>
+  </employee>
+  <employee>
+    <Id>46bc2c7d-fd2d-4a4f-a5dd-ac9054f481a6</Id>
+    <CompanyId>3e462046-8720-407e-9ccf-f80ea384b24c</CompanyId>
+    <LastName>SueLast</LastName>
+    <FirstName>SueFirst</FirstName>
+    <Salary>20</Salary>
+  </employee>
+  <employee>
+    <Id>f30d32e8-ed65-4d71-9a9e-0d03cc14e7ff</Id>
+    <CompanyId>3e462046-8720-407e-9ccf-f80ea384b24c</CompanyId>
+    <LastName>TomLast</LastName>
+    <FirstName>TomFirst</FirstName>
+    <Salary>68</Salary>
+  </employee>
+  <employee>
+    <Id>620542ae-05ad-4332-b920-e37525de5451</Id>
+    <CompanyId>3e462046-8720-407e-9ccf-f80ea384b24c</CompanyId>
+    <LastName>MikeLast</LastName>
+    <FirstName>MikeFirst</FirstName>
+    <Salary>18.99</Salary>
+  </employee>
+</CompanyList>

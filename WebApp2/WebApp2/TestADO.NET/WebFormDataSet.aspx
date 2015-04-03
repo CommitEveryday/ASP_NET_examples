@@ -14,6 +14,9 @@
         <br />
         <asp:Button ID="btDataRelation" runat="server" onclick="btDataRelation_Click" 
             Text="Navigate DataRelation" />
+        <br />
+        <asp:Button ID="btWriteXml" runat="server" onclick="btWriteXml_Click" 
+            Text="WriteXml CompanyList.xml" />
     </div>
     </form>
 </body>

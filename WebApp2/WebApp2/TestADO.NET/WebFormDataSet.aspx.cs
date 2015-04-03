@@ -123,5 +123,14 @@ namespace WebApp2.TestADO.NET
             DataRow companyChild = employeeParent.GetParentRow(dr);
             lbl.Text += "&nbsp;&nbsp;&nbsp;" + companyChild["CompanyName"] + "<br />";
         }
+
+        protected void btWriteXml_Click(object sender, EventArgs e)
+        {
+            DataSet companyList = GetDataSet();
+            PopulateDataSet(companyList);
+            string fileName = "CompanyList.xml";
+            companyList.WriteXml(MapPath(fileName));
+            Response.Redirect(fileName);
+        }
     }
 }

@@ -132,5 +132,22 @@ namespace WebApp2.TestADO.NET
             companyList.WriteXml(MapPath(fileName));
             Response.Redirect(fileName);
         }
+
+        protected void btWriteNestedXml_Click(object sender, EventArgs e)
+        {
+            DataSet companyList = GetDataSet();
+            PopulateDataSet(companyList);
+            companyList.Relations["Company_Employee"].Nested = true;
+            foreach (DataTable dt in companyList.Tables)
+            {
+                foreach (DataColumn dc in dt.Columns)
+                {
+                    dc.ColumnMapping = MappingType.Attribute;
+                }
+            }
+            string fileName = "CompanyListNested.xml";
+            companyList.WriteXml(MapPath(fileName));
+            Response.Redirect(fileName);
+        }
     }
 }

@@ -17,6 +17,9 @@
         <br />
         <asp:Button ID="btWriteXml" runat="server" onclick="btWriteXml_Click" 
             Text="WriteXml CompanyList.xml" />
+        <br />
+        <asp:Button ID="btWriteNestedXml" runat="server" 
+            onclick="btWriteNestedXml_Click" Text="Write Nested Xml" />
     </div>
     </form>
 </body>

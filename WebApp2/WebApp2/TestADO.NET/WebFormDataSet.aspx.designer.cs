@@ -47,5 +47,14 @@ namespace WebApp2.TestADO.NET {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btWriteXml;
+        
+        /// <summary>
+        /// btWriteNestedXml control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btWriteNestedXml;
     }
 }

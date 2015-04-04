@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<CompanyList>
+  <company Id="1daf7e34-0653-474a-89a2-6e3533b9181e" CompanyName="Northwind Traders">
+    <employee Id="200a4afd-c454-4278-8b7e-825c9191380c" CompanyId="1daf7e34-0653-474a-89a2-6e3533b9181e" LastName="JoeLast" FirstName="JoeFirst" Salary="40" />
+    <employee Id="7830e6e5-a905-43e3-9ecf-00194382be93" CompanyId="1daf7e34-0653-474a-89a2-6e3533b9181e" LastName="MaryLast" FirstName="MaryFirst" Salary="70" />
+    <employee Id="468addfd-caf2-4baa-aee9-55ad949b610d" CompanyId="1daf7e34-0653-474a-89a2-6e3533b9181e" LastName="SamLast" FirstName="SamFirst" Salary="12" />
+  </company>
+  <company Id="562055dd-afd7-48d5-9bd0-792433ad4e81" CompanyName="Contoso">
+    <employee Id="23351e96-c294-48ba-9311-771760a183ec" CompanyId="562055dd-afd7-48d5-9bd0-792433ad4e81" LastName="SueLast" FirstName="SueFirst" Salary="20" />
+    <employee Id="4c513f5c-dfc8-42e2-896c-7c3efa459cc8" CompanyId="562055dd-afd7-48d5-9bd0-792433ad4e81" LastName="TomLast" FirstName="TomFirst" Salary="68" />
+    <employee Id="963d913d-cbb0-49ac-86ac-80ca5db9d8d0" CompanyId="562055dd-afd7-48d5-9bd0-792433ad4e81" LastName="MikeLast" FirstName="MikeFirst" Salary="18.99" />
+  </company>
+</CompanyList>

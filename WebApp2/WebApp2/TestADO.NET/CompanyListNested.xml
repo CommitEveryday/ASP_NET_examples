@@ -1,13 +1,50 @@
 <?xml version="1.0" standalone="yes"?>
 <CompanyList>
-  <company Id="1daf7e34-0653-474a-89a2-6e3533b9181e" CompanyName="Northwind Traders">
-    <employee Id="200a4afd-c454-4278-8b7e-825c9191380c" CompanyId="1daf7e34-0653-474a-89a2-6e3533b9181e" LastName="JoeLast" FirstName="JoeFirst" Salary="40" />
-    <employee Id="7830e6e5-a905-43e3-9ecf-00194382be93" CompanyId="1daf7e34-0653-474a-89a2-6e3533b9181e" LastName="MaryLast" FirstName="MaryFirst" Salary="70" />
-    <employee Id="468addfd-caf2-4baa-aee9-55ad949b610d" CompanyId="1daf7e34-0653-474a-89a2-6e3533b9181e" LastName="SamLast" FirstName="SamFirst" Salary="12" />
+  <xs:schema id="CompanyList" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="CompanyList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="company">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="employee" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:attribute name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" use="required" />
+                    <xs:attribute name="CompanyId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                    <xs:attribute name="LastName" type="xs:string" />
+                    <xs:attribute name="FirstName" type="xs:string" />
+                    <xs:attribute name="Salary" type="xs:decimal" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" use="required" />
+              <xs:attribute name="CompanyName" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="employee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//employee" />
+        <xs:field xpath="@Id" />
+      </xs:unique>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//company" />
+        <xs:field xpath="@Id" />
+      </xs:unique>
+      <xs:keyref name="Company_Employee" refer="Constraint1" msdata:IsNested="true">
+        <xs:selector xpath=".//employee" />
+        <xs:field xpath="@CompanyId" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <company Id="5f16443b-bafc-482a-b564-caa28ab30194" CompanyName="Northwind Traders">
+    <employee Id="766e1402-6051-4148-94d9-57df981562a3" CompanyId="5f16443b-bafc-482a-b564-caa28ab30194" LastName="JoeLast" FirstName="JoeFirst" Salary="40" />
+    <employee Id="e0719311-5410-4267-8af7-bccb080859f6" CompanyId="5f16443b-bafc-482a-b564-caa28ab30194" LastName="MaryLast" FirstName="MaryFirst" Salary="70" />
+    <employee Id="f452c490-7736-415e-93ce-fa999aae1919" CompanyId="5f16443b-bafc-482a-b564-caa28ab30194" LastName="SamLast" FirstName="SamFirst" Salary="12" />
   </company>
-  <company Id="562055dd-afd7-48d5-9bd0-792433ad4e81" CompanyName="Contoso">
-    <employee Id="23351e96-c294-48ba-9311-771760a183ec" CompanyId="562055dd-afd7-48d5-9bd0-792433ad4e81" LastName="SueLast" FirstName="SueFirst" Salary="20" />
-    <employee Id="4c513f5c-dfc8-42e2-896c-7c3efa459cc8" CompanyId="562055dd-afd7-48d5-9bd0-792433ad4e81" LastName="TomLast" FirstName="TomFirst" Salary="68" />
-    <employee Id="963d913d-cbb0-49ac-86ac-80ca5db9d8d0" CompanyId="562055dd-afd7-48d5-9bd0-792433ad4e81" LastName="MikeLast" FirstName="MikeFirst" Salary="18.99" />
+  <company Id="c836c1f0-d911-489d-abb7-c0042abc4e33" CompanyName="Contoso">
+    <employee Id="f76a11a1-d36f-4012-b86b-fb6ad30f7091" CompanyId="c836c1f0-d911-489d-abb7-c0042abc4e33" LastName="SueLast" FirstName="SueFirst" Salary="20" />
+    <employee Id="2c4dff53-8eb9-4429-9fd2-fbd6a21da17c" CompanyId="c836c1f0-d911-489d-abb7-c0042abc4e33" LastName="TomLast" FirstName="TomFirst" Salary="68" />
+    <employee Id="3241f761-02ee-4f5f-91bc-12c3c4461ad1" CompanyId="c836c1f0-d911-489d-abb7-c0042abc4e33" LastName="MikeLast" FirstName="MikeFirst" Salary="18.99" />
   </company>
 </CompanyList>

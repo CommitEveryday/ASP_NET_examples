@@ -146,7 +146,8 @@ namespace WebApp2.TestADO.NET
                 }
             }
             string fileName = "CompanyListNested.xml";
-            companyList.WriteXml(MapPath(fileName));
+            companyList.WriteXml(MapPath(fileName), XmlWriteMode.WriteSchema);
+            companyList.WriteXmlSchema(MapPath("CompanyListNested.xsd"));
             Response.Redirect(fileName);
         }
     }

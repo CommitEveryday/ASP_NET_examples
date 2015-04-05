@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="CompanyList" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="CompanyList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="company">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employee" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" use="required" />
+                  <xs:attribute name="CompanyId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                  <xs:attribute name="LastName" type="xs:string" />
+                  <xs:attribute name="FirstName" type="xs:string" />
+                  <xs:attribute name="Salary" type="xs:decimal" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" use="required" />
+            <xs:attribute name="CompanyName" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="employee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//employee" />
+      <xs:field xpath="@Id" />
+    </xs:unique>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//company" />
+      <xs:field xpath="@Id" />
+    </xs:unique>
+    <xs:keyref name="Company_Employee" refer="Constraint1" msdata:IsNested="true">
+      <xs:selector xpath=".//employee" />
+      <xs:field xpath="@CompanyId" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

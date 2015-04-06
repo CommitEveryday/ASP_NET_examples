@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+  <CompanyList>
+    <company diffgr:id="company1" msdata:rowOrder="0" Id="47ff2205-142c-4106-ba8a-90ad381ef4af" CompanyName="Unchanged Company" />
+    <company diffgr:id="company2" msdata:rowOrder="1" diffgr:hasChanges="modified" Id="5cff60a1-d8ba-436d-9dac-68268bf33b31" CompanyName="Modifed Company 1" />
+    <company diffgr:id="company4" msdata:rowOrder="3" diffgr:hasChanges="inserted" Id="f8900e86-9ec8-4c08-be39-2b3fa68a9416" CompanyName="Added Company" />
+  </CompanyList>
+  <diffgr:before>
+    <company diffgr:id="company2" msdata:rowOrder="1" Id="5cff60a1-d8ba-436d-9dac-68268bf33b31" CompanyName="Modifed Company" />
+    <company diffgr:id="company3" msdata:rowOrder="2" Id="9321884c-5432-430f-99d7-e5182955f7c2" CompanyName="Deleted Company" />
+  </diffgr:before>
+</diffgr:diffgram>

@@ -150,5 +150,30 @@ namespace WebApp2.TestADO.NET
             companyList.WriteXmlSchema(MapPath("CompanyListNested.xsd"));
             Response.Redirect(fileName);
         }
+
+        protected void btWriteDiffGram_Click(object sender, EventArgs e)
+        {
+            DataSet companyList = GetDataSet();
+            DataTable company = companyList.Tables["company"];
+            company.Rows.Add(Guid.NewGuid(), "Unchanged Company");
+            company.Rows.Add(Guid.NewGuid(), "Modifed Company");
+            company.Rows.Add(Guid.NewGuid(), "Deleted Company");
+            company.AcceptChanges();
+            company.Rows[1]["CompanyName"] = "Modifed Company 1";
+            company.Rows[2].Delete();
+            company.Rows.Add(Guid.NewGuid(), "Added Company");
+
+            companyList.Relations["Company_Employee"].Nested = true;
+            foreach (DataTable dt in companyList.Tables)
+            {
+                foreach (DataColumn dc in dt.Columns)
+                {
+                    dc.ColumnMapping = MappingType.Attribute;
+                }
+            }
+            string fileName = "CompanyListDiffGram.xml";
+            companyList.WriteXml(MapPath(fileName), XmlWriteMode.DiffGram);
+            Response.Redirect(fileName);
+        }
     }
 }

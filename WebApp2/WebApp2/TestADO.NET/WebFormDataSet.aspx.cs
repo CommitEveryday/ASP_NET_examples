@@ -175,5 +175,21 @@ namespace WebApp2.TestADO.NET
             companyList.WriteXml(MapPath(fileName), XmlWriteMode.DiffGram);
             Response.Redirect(fileName);
         }
+
+        protected void btReadNestedXml_Click(object sender, EventArgs e)
+        {
+            GridView gvCompany = GetGridView(275, 20);
+            GridView gvEmployee = GetGridView(275, 125);
+            DataSet companyList = new DataSet();
+            string fileNameWithoutEnd = "CompanyListNested";
+            companyList.ReadXmlSchema(MapPath(fileNameWithoutEnd + ".xsd"));
+            companyList.ReadXml(MapPath(fileNameWithoutEnd + ".xml"));
+            gvCompany.DataSource = companyList;
+            gvCompany.DataMember = "Company";
+            gvEmployee.DataSource = companyList;
+            gvEmployee.DataMember = "Employee";
+            gvCompany.DataBind();
+            gvEmployee.DataBind();
+        }
     }
 }

@@ -23,6 +23,9 @@
         <br />
         <asp:Button ID="btWriteDiffGram" runat="server" onclick="btWriteDiffGram_Click" 
             Text="Write DiffGram" />
+        <br />
+        <asp:Button ID="btReadNestedXml" runat="server" onclick="btReadNestedXml_Click" 
+            Text="Read Nested Xml" />
     </div>
     </form>
 </body>

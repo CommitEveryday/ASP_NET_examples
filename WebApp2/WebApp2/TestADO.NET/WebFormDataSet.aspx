@@ -33,6 +33,10 @@
         <asp:Button ID="btDeserializeFromBinary" runat="server" 
             Text="Deserialize From Binary" onclick="btDeserializeFromBinary_Click" 
         />
+        <br />
+        <asp:Button ID="btTestMerge" runat="server" 
+            Text="Test Merge" onclick="btTestMerge_Click"
+        />
     </div>
     </form>
 </body>

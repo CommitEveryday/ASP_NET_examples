@@ -229,5 +229,37 @@ namespace WebApp2.TestADO.NET
             gvCompany.DataBind();
             gvEmployee.DataBind();
         }
+
+        protected void btTestMerge_Click(object sender, EventArgs e)
+        {
+            GridView gvCompany = GetGridView(275, 20);
+            GridView gvEmployee = GetGridView(275, 125);
+            DataSet original = GetDataSet();
+
+            PopulateDataSet(original);
+
+            original.Tables["Company"].Rows.Add(
+                Guid.NewGuid(), "AdventureWorks");
+            DataSet copy = original.Copy();
+            DataRow aw = copy.Tables["Company"].Rows[0];
+            aw["CompanyName"] = "AdventureWorks Changed";
+            Guid empId;
+            empId = Guid.NewGuid();
+            copy.Tables["Employee"].Rows.Add(empId, aw["Id"],
+                "MarkLast", "MarkFirst", 90.00m);
+            empId = Guid.NewGuid();
+            copy.Tables["Employee"].Rows.Add(empId, aw["Id"],
+                "SueLast", "SueFirst", 41.00m);
+
+            original.Merge(copy, false, MissingSchemaAction.Error);
+            //MissingSchemaAction.AddWithKey);
+
+            gvCompany.DataSource = original;
+            gvCompany.DataMember = "Company";
+            gvEmployee.DataSource = original;
+            gvEmployee.DataMember = "Employee";
+            gvCompany.DataBind();
+            gvEmployee.DataBind();
+        }
     }
 }

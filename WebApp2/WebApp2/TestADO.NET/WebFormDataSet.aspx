@@ -29,6 +29,10 @@
         <br />
         <asp:Button ID="btSerializeToBinary" runat="server" Text="Serialize To Binary" onclick="btSerializeToBinary_Click"
         />
+        <br />
+        <asp:Button ID="btDeserializeFromBinary" runat="server" 
+            Text="Deserialize From Binary" onclick="btDeserializeFromBinary_Click" 
+        />
     </div>
     </form>
 </body>

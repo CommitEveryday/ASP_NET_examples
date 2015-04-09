@@ -209,5 +209,25 @@ namespace WebApp2.TestADO.NET
             Label lbl = GetLabel(275, 20);
             lbl.Text = "File Saved as " + fileName;
         }
+
+        protected void btDeserializeFromBinary_Click(object sender, EventArgs e)
+        {
+            GridView gvCompany = GetGridView(275, 20);
+            GridView gvEmployee = GetGridView(275, 125);
+            DataSet companyList;
+            string fileName = "CompanyList.bin";
+            using (FileStream fs = new FileStream(MapPath(fileName),
+                FileMode.Open))
+            {
+                BinaryFormatter fmt = new BinaryFormatter();
+                companyList = (DataSet)fmt.Deserialize(fs);
+            }
+            gvCompany.DataSource = companyList;
+            gvCompany.DataMember = "Company";
+            gvEmployee.DataSource = companyList;
+            gvEmployee.DataMember = "Employee";
+            gvCompany.DataBind();
+            gvEmployee.DataBind();
+        }
     }
 }

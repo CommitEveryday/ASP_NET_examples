@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace WebApp2.TestADO.NET
 {
@@ -190,6 +192,22 @@ namespace WebApp2.TestADO.NET
             gvEmployee.DataMember = "Employee";
             gvCompany.DataBind();
             gvEmployee.DataBind();
+        }
+
+        protected void btSerializeToBinary_Click(object sender, EventArgs e)
+        {
+            DataSet companyList = GetDataSet();
+            PopulateDataSet(companyList);
+            companyList.RemotingFormat = SerializationFormat.Binary;
+            string fileName = "CompanyList.bin";
+            using (FileStream fs = new FileStream(MapPath(fileName),
+                FileMode.Create))
+            {
+                BinaryFormatter fmt = new BinaryFormatter();
+                fmt.Serialize(fs, companyList);
+            }
+            Label lbl = GetLabel(275, 20);
+            lbl.Text = "File Saved as " + fileName;
         }
     }
 }

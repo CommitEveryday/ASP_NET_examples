@@ -26,6 +26,9 @@
         <br />
         <asp:Button ID="btReadNestedXml" runat="server" onclick="btReadNestedXml_Click" 
             Text="Read Nested Xml" />
+        <br />
+        <asp:Button ID="btSerializeToBinary" runat="server" Text="Serialize To Binary" onclick="btSerializeToBinary_Click"
+        />
     </div>
     </form>
 </body>
